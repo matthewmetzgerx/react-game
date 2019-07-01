@@ -6,6 +6,16 @@ import Controller from "./Controller/Controller";
 
 export default class TicTacToe extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            game: {
+                gameState: undefined,
+                moves: []
+            }
+        };
+    }
+
     render() {
         return(
             <div className={"tictactoe"}>

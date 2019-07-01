@@ -12,14 +12,21 @@ export default class TicTacToe extends Component {
             game: {
                 gameState: undefined,
                 moves: []
+            },
+            messaging:{
+                message: "Press \"Start Game\" to begin!",
+                messageClass: "default"
             }
         };
     }
 
+    // set event delegator
+    // set reset messaging
+
     render() {
         return(
             <div className={"tictactoe"}>
-                <Messaging />
+                <Messaging message={this.state.messaging.message} messageClass={this.state.messaging.messageClass} />
                 <GameBoard />
                 <Controller />
             </div>

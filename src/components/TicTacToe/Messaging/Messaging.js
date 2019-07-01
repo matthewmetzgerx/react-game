@@ -1,10 +1,10 @@
 import React from 'react';
 import './Messaging.css';
 
-function Messaging() {
+function Messaging(props) {
     return(
         <div className={"messaging"}>
-            Messaging Component
+            <span className={props.messageClass}>{props.message}</span>
         </div>
     );
 }

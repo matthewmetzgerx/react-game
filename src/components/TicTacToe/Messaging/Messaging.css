@@ -1,5 +1,14 @@
 .messaging{
     margin: 5px;
     border: 1px dashed #567;
-    height: 80px;
+    height: 70px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.default{
+    text-align: center;
+    color: green;
+    font-weight: bold;
 }

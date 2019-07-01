@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import TicTacToe from "./components/TicTacToe/TicTacToe";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         React Tic-Tac-Toe Demo
       </header>
       <div className={"container"}>
+          <TicTacToe />
       </div>
     </div>
   );

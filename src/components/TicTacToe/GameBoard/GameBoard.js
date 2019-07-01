@@ -12,9 +12,9 @@ export default class GameBoard extends Component {
     }
 
     render() {
-        const tiles = []
+        const tiles = [];
         for (const [index, value] of this.state.tiles.entries()) {
-            tiles.push(<Tile key={index} className={"tile"}>{value}</Tile>)
+            tiles.push(<Tile key={index} className="tile">{value}</Tile>)
         }
         return(
             <div className={"gameboard"}>

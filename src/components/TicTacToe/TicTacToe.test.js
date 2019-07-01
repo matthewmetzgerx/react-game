@@ -18,3 +18,7 @@ it('loads GameBoard component', () => {
 it('loads Messaging component', () => {
     expect(tictactoe.find('Messaging')).toHaveLength(1);
 });
+
+it('loads Controller component', () => {
+    expect(tictactoe.find('Controller')).toHaveLength(1);
+});

@@ -1,5 +1,12 @@
-.gameboard{
+.gameboard {
     margin: 5px;
-    border: 1px dashed #cde;
     min-height: 290px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    flex-grow: 1;
+    width: 33%;
+    height: 100px;
 }

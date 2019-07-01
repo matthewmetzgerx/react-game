@@ -1,0 +1,5 @@
+.gameboard{
+    margin: 5px;
+    border: 1px dashed #cde;
+    min-height: 290px;
+}

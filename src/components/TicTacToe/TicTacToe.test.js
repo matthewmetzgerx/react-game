@@ -22,3 +22,13 @@ it('loads Messaging component', () => {
 it('loads Controller component', () => {
     expect(tictactoe.find('Controller')).toHaveLength(1);
 });
+
+// State tests
+
+// - default game state
+it('is set to default game state', () => {
+    expect(tictactoe.state().game.gameState).toEqual(undefined);
+    expect(tictactoe.state().game.moves).toEqual([]);
+});
+
+

@@ -5,6 +5,7 @@ import Messaging from "./Messaging/Messaging";
 import Controller from "./Controller/Controller";
 
 export default class TicTacToe extends Component {
+
     render() {
         return(
             <div className={"tictactoe"}>

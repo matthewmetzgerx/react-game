@@ -1,0 +1,11 @@
+.tictactoe {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    left: 50%;
+    top: 250px;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #ddd;
+    display: flex;
+    flex-direction: column;
+}

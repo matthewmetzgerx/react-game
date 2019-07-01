@@ -2,8 +2,8 @@
     position: relative;
     width: 400px;
     left: 50%;
-    top: 200px;
-    transform: translate(-50%, -50%);
+    top: 50px;
+    transform: translate(-50%, 0);
     border: 1px dashed #ddd;
     display: flex;
     flex-direction: column;

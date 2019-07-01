@@ -9,7 +9,12 @@ it('renders without crashing', () => {
     ReactDOM.unmountComponentAtNode(div);
 });
 
-const app = mount(<TicTacToe />);
+const tictactoe = mount(<TicTacToe />);
+
 it('loads GameBoard component', () => {
-    expect(app.find('GameBoard')).toHaveLength(1);
+    expect(tictactoe.find('GameBoard')).toHaveLength(1);
+});
+
+it('loads Messaging component', () => {
+    expect(tictactoe.find('Messaging')).toHaveLength(1);
 });

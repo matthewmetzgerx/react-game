@@ -63,10 +63,10 @@
 ### Components
 
 - Game container
-    - game board
+    - game board ->GameBoard
         - tiles
-    - revert & reset console area
-    - messaging console (stateless)
+    - revert & reset console area -> Controller
+    - messaging console (stateless) -> Messaging
     - Win messaging to entire container?
 
 - Misc

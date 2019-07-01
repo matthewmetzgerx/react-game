@@ -13,4 +13,3 @@ const app = mount(<App />);
 it('loads TicTacToe component', () => {
   expect(app.find('TicTacToe')).toHaveLength(1);
 });
-

@@ -3,9 +3,13 @@ import './Button.css';
 
 export default class Button extends Component {
 
+    emitEvent = (eventvalue) => {
+        this.props.cb(this.props.event)
+    };
+
     render() {
         return(
-            <button className={"button"}>{this.props.text}</button>
+            <button className={"button"} onClick={this.emitEvent}>{this.props.text}</button>
         )
     }
 }

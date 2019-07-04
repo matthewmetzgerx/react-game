@@ -6,20 +6,6 @@ import Controller from "./Controller/Controller";
 
 export default class TicTacToe extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            game: {
-                gameState: undefined,
-                moves: []
-            },
-            messaging:{
-                message: "Press \"Start Game\" to begin!",
-                messageClass: "default"
-            }
-        };
-    }
-
     // set event delegator
     // set reset messaging
 

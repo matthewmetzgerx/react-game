@@ -31,4 +31,21 @@ it('is set to default game state', () => {
     expect(tictactoe.state().game.moves).toEqual([]);
 });
 
+it('should return current state from helper on instantiation', () => {
+    let ttt = new TicTacToe();
+    let initialState = ttt.state;
+    expect(initialState).toEqual({
+        game: {
+            gameState: undefined,
+            moves: 0,
+            moveseq: [],
+            tiles: [0,0,0,0,0,0,0,0,0]
+        },
+        messaging:{
+            message: "Press \"Start Game\" to begin!",
+            messageClass: "default"
+        }
+    });
+});
+
 

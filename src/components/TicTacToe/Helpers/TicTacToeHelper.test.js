@@ -53,4 +53,17 @@ it('should set initial state on load and validate setCurrentState, getCurrentSta
             messageClass: "default-test"
         }
     });
+
+
+    // need to have state manager here
+    // requires further explanation
+    // start-game
+    // in-progress
+    // tile-clicked - can determine win/draw
+    // reset-game
+    // revert-move
+    expect(ttthelp.updateGameState()).toEqual({
+
+    });
+
 });

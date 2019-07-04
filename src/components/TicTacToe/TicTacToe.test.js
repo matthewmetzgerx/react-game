@@ -28,12 +28,11 @@ it('loads Controller component', () => {
 // - default game state
 it('is set to default game state', () => {
     expect(tictactoe.state().game.gameState).toEqual(undefined);
-    expect(tictactoe.state().game.moves).toEqual([]);
+    expect(tictactoe.state().game.moves).toEqual(0);
 });
 
 it('should return current state from helper on instantiation', () => {
-    let ttt = new TicTacToe();
-    let initialState = ttt.state;
+    let initialState = tictactoe.state();
     expect(initialState).toEqual({
         game: {
             gameState: undefined,

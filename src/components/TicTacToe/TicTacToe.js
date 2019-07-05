@@ -15,7 +15,6 @@ export default class TicTacToe extends Component {
     };
 
     delegator = (eventobj) => {
-        // return to helper state manager and get new state.
         this.setState(this.ttthelp.updateGameState(eventobj));
     };
 

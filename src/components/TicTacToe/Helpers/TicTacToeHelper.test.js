@@ -155,7 +155,7 @@ it('should determine win if moves greater >= 5 and sequence matches win conditio
     };
 
     ttthelp.setCurrentState(mockInitialState);
-    let eventobj = {event: "tile-clicked"};
+    let eventobj = {event: "tile-clicked", keyid: 6};
     let newState = ttthelp.updateGameState(eventobj);
     expect(newState).toEqual({
         game:{
@@ -176,7 +176,7 @@ it('should determine draw if moves == 9 and there is no win', () => {
 
     let mockInitialState = {
         game: {
-            gameState: undefined,
+            gameState: "in-progress",
             moves: 8,
             moveseq: [0,1,2,3,5,4,6,8],
             tiles: [1,2,1,2,2,1,1,1,0]
@@ -188,13 +188,13 @@ it('should determine draw if moves == 9 and there is no win', () => {
     };
 
     ttthelp.setCurrentState(mockInitialState);
-    let eventobj = {event: "tile-clicked"};
+    let eventobj = {event: "tile-clicked", keyid: 7};
     let newState = ttthelp.updateGameState(eventobj);
     expect(newState).toEqual({
         game:{
             gameState: undefined,
             moves: 9,
-            tiles: [1,2,1,2,2,1,1,1,2],
+            tiles: [1,2,1,2,2,1,1,1,0],
             moveseq: [0,1,2,3,5,4,6,8,7]
         },
         messaging:{
@@ -222,7 +222,7 @@ it('should increment moves and sequence if not win and moves less than 9', () =>
     };
 
     ttthelp.setCurrentState(mockInitialState);
-    let eventobj = {event: "start-game"};
+    let eventobj = {event: "tile-clicked", keyid: 1};
     let newState = ttthelp.updateGameState(eventobj);
     expect(newState).toEqual({
         game:{

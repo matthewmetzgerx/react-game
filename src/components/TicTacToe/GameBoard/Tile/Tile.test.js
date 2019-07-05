@@ -24,12 +24,12 @@ it('is not clickable only when already set', () => {
 it('reads X when props value is set to 1', () => {
     let myprops = {value: 1};
     const tile = mount( <Tile {...myprops} />);
-    expect(tile.find('div').text()).toEqual("X");
+    expect(tile.find('i').hasClass("fa-times")).toEqual(true);
 });
 
 it('reads "0" when props value is set to 2', () => {
     let myprops = {value: 2};
     const tile = mount( <Tile {...myprops} />);
-    expect(tile.find('div').text()).toEqual("O");
+    expect(tile.find('i').hasClass("fa-circle")).toEqual(true);
 });
 

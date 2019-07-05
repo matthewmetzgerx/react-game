@@ -9,9 +9,9 @@ export default class Tile extends Component {
 
     getValue = () => {
         if (this.props.value === 1){
-            return "X";
+            return <i className="fas fa-times fa-4x marker" />;
         } else if (this.props.value === 2){
-            return "O";
+            return <i className="far fa-circle fa-3x marker" />;
         }
     };
 

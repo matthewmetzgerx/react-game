@@ -21,7 +21,6 @@ it('renders revert-move button in controller reading "in-progress" gameState and
     expect(controller.find(Button).last().hasClass("revert-move")).toEqual(true);
 });
 
-
 it('renders no buttons in controller reading "in-progress" gameState and moves == 0', () => {
     let myprops = {gameState: "in-progress", moves:0};
     const controller = mount( <Controller {...myprops} />);

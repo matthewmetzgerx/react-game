@@ -32,10 +32,24 @@ class TTThelper {
     updateGameState = (eventobj) => {
         let eventState = this.getCurrentState();
 
+        if (eventobj.event === "start-game"){
+            eventState = {
+                game:{ gameState: "in-progress", moves: 0, tiles: [0,0,0,0,0,0,0,0,0], moveseq: [] },
+                messaging:{ message: this.whoMove(0) + " player, take your turn!", messageClass: "makemove" }
+            };
 
-        // state manager events
-        // start-game
-        // in-progress
+        } else if (eventobj.event === "tile-clicked"){
+            let tiles = eventState.game.tiles;
+            tiles[eventobj.keyid] = (eventState.game.moves % 2 === 0) ? 1 : 2;
+            let moveseq = eventState.game.moveseq;
+            moveseq.push(eventobj.keyid);
+
+            eventState = {
+                game:{ gameState: "in-progress", moves: eventState.game.moves+1, tiles: tiles, moveseq: moveseq },
+                messaging:{ message: this.whoMove(eventState.game.moves+1) + " player, take your turn!", messageClass: "makemove" }
+            };
+        }
+
         // tile-clicked - can determine win/draw
         // reset-game
         // revert-move
@@ -44,7 +58,6 @@ class TTThelper {
         // returns updated state
         return eventState;
     }
-
 }
 
 export default TTThelper;

@@ -3,19 +3,17 @@ import './GameBoard.css';
 import Tile from "./Tile/Tile";
 
 export default class GameBoard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            tiles: [0,0,0,0,0,0,0,0,0]
-        };
-        // 0 is unselected, 1 is X, 2 is O
-    }
+
+    callback = (vals) => {
+        this.props.cb({event: vals.event, keyid: vals.keyid});
+    };
 
     render() {
         const tiles = [];
-        for (const [index, value] of this.state.tiles.entries()) {
-            tiles.push(<Tile key={index} className="tile">{value}</Tile>)
+        for (const [index, value] of this.props.tiles.entries()) {
+            tiles.push(<Tile key={index} keyid={index} gameState={this.props.gameState} value={this.props.tiles[index]} className="tile" cb={this.callback}></Tile>)
         }
+
         return(
             <div className={"gameboard"}>
                 {tiles}

@@ -23,8 +23,8 @@ export default class TicTacToe extends Component {
         return(
             <div className={"tictactoe"}>
                 <Messaging message={this.state.messaging.message} messageClass={this.state.messaging.messageClass} />
-                <GameBoard cb={this.delegator} />
-                <Controller cb={this.delegator} gameState={this.state.game.gameState} />
+                <GameBoard cb={this.delegator} moves={this.state.game.moves} gameState={this.state.game.gameState} tiles={this.state.game.tiles} />
+                <Controller cb={this.delegator} gameState={this.state.game.gameState} moves={this.state.game.moves}/>
             </div>
         )
     }

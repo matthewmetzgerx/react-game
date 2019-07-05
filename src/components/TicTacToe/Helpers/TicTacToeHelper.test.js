@@ -53,17 +53,27 @@ it('should set initial state on load and validate setCurrentState, getCurrentSta
             messageClass: "default-test"
         }
     });
-
-
-    // need to have state manager here
-    // requires further explanation
-    // start-game
-    // in-progress
-    // tile-clicked - can determine win/draw
-    // reset-game
-    // revert-move
-    expect(ttthelp.updateGameState()).toEqual({
-
-    });
-
 });
+
+it('should update gameState to in-progress upon game start', () => {
+    // start-game
+    let eventobj = {event: "start-game"};
+    let newState = ttthelp.updateGameState(eventobj);
+    expect(newState).toEqual({
+        game:{
+            gameState: "in-progress",
+            moves: 0,
+            tiles: [0,0,0,0,0,0,0,0,0],
+            moveseq: []
+        },
+        messaging:{
+            message: "X player, take your turn!",
+            messageClass: "makemove"
+        }
+    })
+});
+
+// in-progress
+// tile-clicked - can determine win/draw
+// reset-game
+// revert-move

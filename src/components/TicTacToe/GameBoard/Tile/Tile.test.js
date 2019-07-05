@@ -10,15 +10,15 @@ it('renders tile without crashing', () => {
 });
 
 it('is clickable only when not already set', () => {
-    let myprops = {value: 0};
+    let myprops = {value: 0, gameState: "in-progress"};
     const tile = mount( <Tile {...myprops} />);
-    expect((tile.find('div').hasClass("clickable")).length).toEqual(1);
+    expect(tile.find('div').hasClass("clickable")).toEqual(true);
 });
 
 it('is not clickable only when already set', () => {
-    let myprops = {value: 1};
+    let myprops = {value: 1, gameState: undefined};
     const tile = mount( <Tile {...myprops} />);
-    expect((tile.find('div').hasClass("clickable")).length).toEqual(0);
+    expect(tile.find('div').hasClass("clickable")).toEqual(false);
 });
 
 it('reads X when props value is set to 1', () => {
@@ -28,15 +28,8 @@ it('reads X when props value is set to 1', () => {
 });
 
 it('reads "0" when props value is set to 2', () => {
-    let myprops = {value: 1};
+    let myprops = {value: 2};
     const tile = mount( <Tile {...myprops} />);
     expect(tile.find('div').text()).toEqual("O");
 });
 
-it('raises event on click', () => {
-    let myprops = {value: 0};
-    const tile = mount( <Tile {...myprops} />);
-    const cb = jest.fn();
-    tile.find('div').simulate('click');
-    expect(cb.mock.calls.length).toEqual(1);
-});

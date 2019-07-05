@@ -5,7 +5,7 @@ import Button from "../../Elements/Button/Button";
 export default class Controller extends Component {
 
     callback = (event) => {
-        // button callback
+        this.props.cb({event: event});
     };
 
     render() {
@@ -14,6 +14,10 @@ export default class Controller extends Component {
                 <div className={"controller"}>
                     <Button gameState={this.props.gameState} text="Start Game" event="start-game" cb={this.callback} />
                 </div>
+            )
+        } else {
+            return(
+                <div className={"controller"}></div>
             )
         }
     }

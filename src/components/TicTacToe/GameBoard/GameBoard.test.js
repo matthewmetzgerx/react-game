@@ -3,8 +3,8 @@ import GameBoard from "./GameBoard";
 import Tile from "./Tile/Tile";
 import {mount} from "enzyme/build";
 
-it('renders gameboard reading undefined gameState and empty moves array', () => {
-    let myprops = {gameState: undefined, moves:[]};
+it('renders gameboard reading undefined gameState and 0 moves', () => {
+    let myprops = {gameState: undefined, moves:0, tiles: [0,0,0,0,0,0,0,0,0]};
     const gameboard = mount( <GameBoard {...myprops} />);
     expect(gameboard.find(Tile)).toHaveLength(9);
 });

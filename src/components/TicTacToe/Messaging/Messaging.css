@@ -1,14 +1,17 @@
 .messaging{
     margin: 5px;
-    border: 1px dashed #567;
+    border: 1px dashed #eee;
     height: 70px;
     text-align: center;
-    padding: 10px;
     box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .default{
-    text-align: center;
-    color: green;
-    font-weight: bold;
+    color: #407B55;
+}
+
+.makemove{
+    color: #007BD4;
 }

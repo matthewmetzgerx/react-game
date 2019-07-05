@@ -1,5 +1,8 @@
 .controller{
     margin: 5px;
-    border: 1px dashed #9ab;
+    border: 1px dashed #eee;
     min-height: 80px;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
 }
